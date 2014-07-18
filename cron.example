@@ -1,0 +1,2 @@
+# m h  dom mon dow   command
+10 * * * * cd /opt/log-recap && ./last_hour.sh
