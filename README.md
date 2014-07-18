@@ -1,14 +1,15 @@
 # log-recap
 
-Parse your logs and send them via email !
+Parse your logs and send them via email.
 
-This is a pretty simple script but does the job for me. Thanks to Dennis Williamson who wrote the timegrep.py scrpt in response to http://serverfault.com/questions/101744/fast-extraction-of-a-time-range-from-syslog-logfile
+This is a pretty simple/crude script, but it does the job for me. Thanks to Dennis Williamson who wrote the timegrep.py script in response to http://serverfault.com/questions/101744/fast-extraction-of-a-time-range-from-syslog-logfile
 
-I use it to parse my production log every hour
+I use it to parse my production logs every hour.
 
 ## Prerequisites
 * python >= 2.6
-* configured ssmtp
+* a configured ssmtp (https://wiki.debian.org/sSMTP)
+* enought disk space on your loghost
 
 ## Install
 Just copy these files under whatever forder you like. I personnaly use /opt/log-recap
@@ -39,6 +40,6 @@ hour=`date +\%H -d "-1 hour"`
 begin=${hour}:00:00
 end=${hour}:59:59
 
-./recap.sh ${begin} ${end} /var/log/front.log front jp@dot.com
-./recap.sh ${begin} ${end} /var/log/back.log back jp@dot.com
+./recap.sh ${begin} ${end} /var/log/front.log front john@acme.com
+./recap.sh ${begin} ${end} /var/log/back.log back john@acme.com
 ``
