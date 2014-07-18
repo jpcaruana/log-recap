@@ -27,7 +27,11 @@ To: ${DEST}
 
 EOF
 	grep $level ${all_file} >> ${level_file}
-	cat ${level_file} | ssmtp ${DEST}
+	nb_lines=`wc -l ${level_file} | cut -d" " -f1`
+	if [  "3" != $nb_lines ]
+	then
+		cat ${level_file} | ssmtp ${DEST}
+	fi
 	rm ${level_file}
 done
 
