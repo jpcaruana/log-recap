@@ -17,7 +17,7 @@ TITLE=$4
 DEST=$5
 
 all_file=/tmp/${TITLE}.log
-python log.py ${START_TIME} ${END_TIME} ${FILE_NAME} > ${all_file}
+python timegrep.py ${START_TIME} ${END_TIME} ${FILE_NAME} > ${all_file}
 for level in "ERROR" "WARN"
 do
 	level_file=/tmp/${TITLE}-${level}.log
