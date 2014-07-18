@@ -44,18 +44,18 @@ def getdata():
     try:
         line = handle.readline(bufsize)
     except:
-        print("File I/O Error")
+        # print("File I/O Error")
         exit(1)
     if line == '':
-        print("EOF reached")
+        # print("EOF reached")
         exit(1)
     if line[-1] == '\n':
         line = line.rstrip('\n')
     else:
-        if len(line) >= bufsize:
-            print("Line length exceeds buffer size")
-        else:
-            print("Missing newline")
+        # if len(line) >= bufsize:
+        #     print("Line length exceeds buffer size")
+        # else:
+        #     print("Missing newline")
         exit(1)
     words = line.split(' ')
     if len(words) >= 3:
@@ -140,7 +140,7 @@ searchend = searchend + " " + end
 try:
     handle = open(file, 'r')
 except:
-    print("File Open Error")
+    # print("File Open Error")
     exit(1)
 
 # Set some initial values
