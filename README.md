@@ -1,3 +1,4 @@
+
 # log-recap
 
 Parse your logs and send them via email.
@@ -5,6 +6,17 @@ Parse your logs and send them via email.
 This is a pretty simple/crude script, but it does the job for me. Thanks to Dennis Williamson who wrote the timegrep.py script in response to http://serverfault.com/questions/101744/fast-extraction-of-a-time-range-from-syslog-logfile
 
 I use it to parse my production logs every hour.
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Prerequisites](#prerequisites)
+- [Install](#install)
+- [How to use it](#how-to-use-it)
+- [Cron](#cron)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Prerequisites
 * python >= 2.6
